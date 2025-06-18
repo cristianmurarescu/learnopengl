@@ -7,7 +7,8 @@
       "RelativeMoniker": "D:0:0:{06BAE4D6-0C47-4EB8-B905-1F5929DA5A8D}|LearnOpenGL.vcxproj|solutionrelative:Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06BAE4D6-0C47-4EB8-B905-1F5929DA5A8D}|LearnOpenGL.vcxproj|C:\\Users\\cristianmurarescu\\PersonalWork\\learnopengl\\glad.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{06BAE4D6-0C47-4EB8-B905-1F5929DA5A8D}|LearnOpenGL.vcxproj|C:\\USERS\\CRISTIANMURARESCU\\PERSONALWORK\\LEARNOPENGL\\LEARNOPENGL\\DEPENDENCIES\\GLEW\\INCLUDE\\GL\\GLEW.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{06BAE4D6-0C47-4EB8-B905-1F5929DA5A8D}|LearnOpenGL.vcxproj|solutionrelative:DEPENDENCIES\\GLEW\\INCLUDE\\GL\\GLEW.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "glew.h",
+              "DocumentMoniker": "C:\\Users\\cristianmurarescu\\PersonalWork\\learnopengl\\LearnOpenGL\\Dependencies\\GLEW\\include\\GL\\glew.h",
+              "RelativeDocumentMoniker": "Dependencies\\GLEW\\include\\GL\\glew.h",
+              "ToolTip": "C:\\Users\\cristianmurarescu\\PersonalWork\\learnopengl\\LearnOpenGL\\Dependencies\\GLEW\\include\\GL\\glew.h",
+              "RelativeToolTip": "Dependencies\\GLEW\\include\\GL\\glew.h",
+              "ViewState": "AgIAAA4HAAAAAAAAAAAkwCMHAACTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-18T14:47:30.616Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -27,22 +41,10 @@
               "RelativeDocumentMoniker": "Source.cpp",
               "ToolTip": "C:\\Users\\cristianmurarescu\\PersonalWork\\learnopengl\\LearnOpenGL\\Source.cpp",
               "RelativeToolTip": "Source.cpp",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABkAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-18T13:51:25.371Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "glad.c",
-              "DocumentMoniker": "C:\\Users\\cristianmurarescu\\PersonalWork\\learnopengl\\glad.c",
-              "RelativeDocumentMoniker": "..\\glad.c",
-              "ToolTip": "C:\\Users\\cristianmurarescu\\PersonalWork\\learnopengl\\glad.c",
-              "RelativeToolTip": "..\\glad.c",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACEAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-06-17T19:05:42.942Z"
             }
           ]
         }
