@@ -120,29 +120,47 @@ int main(void)
     /* Print out the GL version */
     std::cout << glGetString(GL_VERSION) << std::endl;
 
-    /* Vertex data for our triangle */
-    float positions[6] = 
+    /* Vertex data for our rectangle */
+    float positions[] = 
     {
-        -0.5f, -0.5f,
-         0.0f,  0.5f,
-         0.5f, -0.5f,
+        -0.5f, -0.5f, // 0
+         0.5f, -0.5f, // 1
+         0.5f,  0.5f, // 2
+        -0.5f,  0.5f  // 3
     };
 
-    /* Create a buffer */
-    unsigned int buffer;
-    glGenBuffers(1, &buffer);
+    /* Index data for our rectangle */
+    unsigned int indices[] =
+    {
+        0, 1, 2,
+        2, 3, 0,
+    };
+
+    /* Create a vertex buffer */
+    unsigned int vertexBufferObject;
+    glGenBuffers(1, &vertexBufferObject);
     
-    /* Bind/Select the buffer to use */
-    glBindBuffer(GL_ARRAY_BUFFER, buffer);
+    /* Bind/Select the vertex buffer to use */
+    glBindBuffer(GL_ARRAY_BUFFER, vertexBufferObject);
     
-    /* Fill in buffer with our data */
-    glBufferData(GL_ARRAY_BUFFER, 6 * sizeof(float), positions, GL_STATIC_DRAW);
+    /* Fill in vertex buffer with our data */
+    glBufferData(GL_ARRAY_BUFFER, 6 * 2 * sizeof(float), positions, GL_STATIC_DRAW);
 
     /* Enable the vertex attribute pointer */
     glEnableVertexAttribArray(0);
 
     /* Set the vertex attribute pointer data */
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), 0);
+
+    /* Create an index buffer */
+    unsigned int indexBufferObject;
+    glGenBuffers(1, &indexBufferObject);
+
+    /* Bind/Select the index buffer to use */
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBufferObject);
+
+    /* Fill in index buffer with our data */
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6 * sizeof(unsigned int), indices, GL_STATIC_DRAW);
 
     ShaderProgramSource source = ParseShader("Basic.shader");
     
@@ -163,7 +181,10 @@ int main(void)
         glClear(GL_COLOR_BUFFER_BIT);
 
         /* Draw the arrays of data using the triangles primitive */
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        //glDrawArrays(GL_TRIANGLES, 0, 6);
+
+        /* Draw the vertices using indices using the triangles primitive */
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
 
         /* Swap front and back buffers */
         glfwSwapBuffers(window);
